@@ -54,5 +54,5 @@ module.exports = {
       { text: '知识点', link: '/topics/' }
     ] // 导航
   },
-  base: '/topics/'
+  base: '/static-website/'
 }
