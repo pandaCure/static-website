@@ -41,6 +41,20 @@ module.exports = {
           children: ['']
         }
       ],
+      '/just-javascript/': [
+        {
+          title: 'Just Javascript',
+          collapsable: false,
+          children: ['1']
+        }
+      ],
+      '/interview/': [
+        {
+          title: '面试题',
+          collapsable: false,
+          children: ['1', '2', '3']
+        }
+      ],
       '/': [
         {
           title: '主页',
@@ -51,7 +65,9 @@ module.exports = {
     }, // 侧边栏
     nav: [
       { text: '主页', link: '/' },
-      { text: '知识点', link: '/topics/' }
+      { text: '知识点', link: '/topics/' },
+      { text: 'Just Javascript对照翻译', link: '/just-javascript/' },
+      { text: '面试题', link: '/interview/' }
     ] // 导航
   },
   base: '/static-website/'

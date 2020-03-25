@@ -91,6 +91,8 @@ deploy:
 ```
 3、提交`.travis.yml`到`git`仓库
 
+注意：这里可能需要登录，我没有遇到过，如果需要登录输入`GitHub`信息即可
+
 ## Github Pages配置
 
 > 使用[github page](https://pages.github.com/), 快速部署你的静态网页, 白嫖 不用白不用
