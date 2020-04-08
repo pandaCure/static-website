@@ -52,7 +52,19 @@ module.exports = {
         {
           title: '面试题',
           collapsable: false,
-          children: ['1', '2', '3']
+          children: ['1', '2', '3', '4']
+        }
+      ],
+      '/origin/': [
+        {
+          title: 'dva源码',
+          collapsable: false,
+          children: ['dva-1']
+        },
+        {
+          title: 'react源码',
+          collapsable: false,
+          children: ['react-1']
         }
       ],
       '/': [
@@ -67,7 +79,8 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: '知识点', link: '/topics/' },
       { text: 'Just Javascript对照翻译', link: '/just-javascript/' },
-      { text: '面试题', link: '/interview/' }
+      { text: '面试题', link: '/interview/' },
+      { text: '源码系列', link: '/origin/' }
     ] // 导航
   },
   base: '/static-website/'

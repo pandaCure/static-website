@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function* a() {
+      // while 是generator重复执行
+      while (true) {
+        // yield后面表达式的值作为next后的value next传的参数作为结果
+        const a = yield () => {}
+        console.log(a)
+        // return 结束generator return的值作为value
+        return false
+        yield console.log(2)
+      }
+    }
+    const $ = window.a()
+  </script>
+</body>
+</html>
