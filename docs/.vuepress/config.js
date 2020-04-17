@@ -71,7 +71,7 @@ module.exports = {
         {
           title: '主页',
           collapsable: false,
-          children: ['', 'oop']
+          children: ['', 'oop', 'bnf']
         }
       ]
     }, // 侧边栏
