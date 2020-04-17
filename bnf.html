@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>产生式(BNF) | 钟繇</title>
+    <meta name="description" content="JavaScript知识点">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/static-website/logo.png">
+  <link rel="manifest" href="/static-website/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/static-website/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/static-website/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/static-website/assets/css/0.styles.57852ca5.css" as="style"><link rel="preload" href="/static-website/assets/js/app.c8496f9f.js" as="script"><link rel="preload" href="/static-website/assets/js/2.1f517c06.js" as="script"><link rel="preload" href="/static-website/assets/js/7.353fc449.js" as="script"><link rel="prefetch" href="/static-website/assets/js/10.4d784bf9.js"><link rel="prefetch" href="/static-website/assets/js/11.74ce90d6.js"><link rel="prefetch" href="/static-website/assets/js/12.611f1fe9.js"><link rel="prefetch" href="/static-website/assets/js/13.75324db5.js"><link rel="prefetch" href="/static-website/assets/js/14.6e958ccc.js"><link rel="prefetch" href="/static-website/assets/js/15.e3bd749c.js"><link rel="prefetch" href="/static-website/assets/js/16.83d172a2.js"><link rel="prefetch" href="/static-website/assets/js/17.3486be53.js"><link rel="prefetch" href="/static-website/assets/js/18.dfa14ad9.js"><link rel="prefetch" href="/static-website/assets/js/19.4d538a11.js"><link rel="prefetch" href="/static-website/assets/js/20.a334c17c.js"><link rel="prefetch" href="/static-website/assets/js/21.2b42e65e.js"><link rel="prefetch" href="/static-website/assets/js/22.ce8766c0.js"><link rel="prefetch" href="/static-website/assets/js/23.48ff6209.js"><link rel="prefetch" href="/static-website/assets/js/3.455a7035.js"><link rel="prefetch" href="/static-website/assets/js/4.6e96a130.js"><link rel="prefetch" href="/static-website/assets/js/5.cbd0f1fd.js"><link rel="prefetch" href="/static-website/assets/js/6.8b5122f1.js"><link rel="prefetch" href="/static-website/assets/js/8.c6d52a50.js"><link rel="prefetch" href="/static-website/assets/js/9.95ebbbc2.js">
+    <link rel="stylesheet" href="/static-website/assets/css/0.styles.57852ca5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/static-website/" class="home-link router-link-active"><!----> <span class="site-name">钟繇</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/static-website/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/static-website/topics/" class="nav-link">
+  知识点
+</a></div><div class="nav-item"><a href="/static-website/just-javascript/" class="nav-link">
+  Just Javascript对照翻译
+</a></div><div class="nav-item"><a href="/static-website/interview/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><a href="/static-website/origin/" class="nav-link">
+  源码系列
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/static-website/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/static-website/topics/" class="nav-link">
+  知识点
+</a></div><div class="nav-item"><a href="/static-website/just-javascript/" class="nav-link">
+  Just Javascript对照翻译
+</a></div><div class="nav-item"><a href="/static-website/interview/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><a href="/static-website/origin/" class="nav-link">
+  源码系列
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>主页</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/static-website/" class="sidebar-link">Travis自动化部署VuePress到Github Pages</a></li><li><a href="/static-website/oop.html" class="sidebar-link">面向对象</a></li><li><a href="/static-website/bnf.html" class="active sidebar-link">产生式(BNF)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/static-website/bnf.html#什么是bnf" class="sidebar-link">什么是BNF</a></li><li class="sidebar-sub-header"><a href="/static-website/bnf.html#bnf范式的语法" class="sidebar-link">BNF范式的语法</a></li><li class="sidebar-sub-header"><a href="/static-website/bnf.html#bnf以中文为例子" class="sidebar-link">BNF以中文为例子</a></li><li class="sidebar-sub-header"><a href="/static-website/bnf.html#参考" class="sidebar-link">参考</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="产生式-bnf"><a href="#产生式-bnf" class="header-anchor">#</a> 产生式(BNF)</h1> <h2 id="什么是bnf"><a href="#什么是bnf" class="header-anchor">#</a> 什么是BNF</h2> <p>BNF(Backus-Naur Form)是描述编程语言的文法。巴科斯范式是一种用于表示上下文无关文法的语言，上下文无关文法描述了一类形式语言。</p> <p>自然语言存在不同程度的二义性。这种模糊、不确定的方式无法精确定义一门程序设计语言。必须设计一种准确无误地描述程序设计语言的语法结构，这种严谨、简洁、易读的形式规则描述的语言结构模型称为文法。</p> <p>BNF规定是推导规则(产生式)的集合，写为：</p> <blockquote><p><code>符号 ::= &lt;使用符号的表达式&gt;</code></p></blockquote> <p>这里的 &lt;符号&gt; 是非终结符，而表达式由一个符号序列，或用指示选择的竖杠 '|' 分隔的多个符号序列构成，每个符号序列整体都是左端的符号的一种可能的替代。从未在左端出现的符号叫做终结符。</p> <h2 id="bnf范式的语法"><a href="#bnf范式的语法" class="header-anchor">#</a> BNF范式的语法</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt; &gt;     : 内包含的为必选项。// 用来区分这个非终结符的
+[ ]     : 内包含的为可选项。
+{ }     : 内包含的为可重复0至无数次的项。// 也可以用递归出现
+|       : 表示在其左右两边任选一项，相当于&quot;OR&quot;的意思。
+::=     : 是“被定义为”的意思
+&quot;...&quot;   : 术语符号 // 代表自身
+[...]   : 选项，最多出现一次
+{...}   : 重复项，任意次数，包括 0 次
+(...)   : 分组
+|       : 并列选项，只能选一个
+</code></pre></div><h2 id="bnf以中文为例子"><a href="#bnf以中文为例子" class="header-anchor">#</a> BNF以中文为例子</h2> <p>在中文语法里，一个句子一般由“主语”、“谓语”和“宾语”组成，主语可以是名词或者代词，谓语一般是动词，宾语可以使形容词，名词或者代词。那么“主语”、“谓语”和“宾语”就是非终止符，因为还可以继续由“名词”、“代词”、“动词”、“形容词”等替代。</p> <p>例1. &lt;句子&gt; ::= &lt;主语&gt;&lt;谓语&gt;&lt;宾语&gt;</p> <p>例2. &lt;主语&gt; ::= &lt;名词&gt;|&lt;代词&gt;</p> <p>例3. &lt;谓语&gt;::=&lt;动词&gt;</p> <p>例4. &lt;宾语&gt;::=&lt;形容词&gt;|&lt;名词&gt;|&lt;代词&gt;</p> <p>例5. &lt;代词&gt;::=&lt;我&gt;例6. &lt;动词&gt;::=&lt;吃&gt;</p> <p>例7. &lt;动词&gt;::=&lt;喜欢&gt;</p> <p>例8. &lt;名词&gt;::=&lt;车&gt;</p> <p>例9. &lt;名词&gt;::=&lt;肉&gt;</p> <p>如上，在::=左边的就是non-terminal非终止符，右边的就是replacement，可以是一系列的非终止符，如例1中的replacement便是后面例234左边的非终止符，也可以是终止符，如例56789的右边，找不到别的符号来进一步代替。</p> <div class="language- extra-class"><pre class="language-text"><code>//整数加法
+&lt;Number&gt; = &quot;0&quot; | &quot;1&quot; | ... | &quot;9&quot;
+&lt;DecimalNumber&gt; = (&quot;0&quot; | (&quot;1&quot; | ... | &quot;9&quot;) &lt;Number&gt;*)
+&lt;AdditiveExpression&gt; ::                                                                                                                                                                              = &lt;DecimalNumber&gt;
+&lt;AdditiveExpression&gt; = &lt;AdditiveExpression&gt; &quot;+&quot; &lt;DecimalNumber&gt;
+// 另一种写法
+&lt;AdditiveExpression&gt; = &lt;DecimalNumber&gt; | &lt;AdditiveExpression&gt; &quot;+&quot; &lt;DecimalNumber&gt;
+// 最终版
+&lt;AdditiveExpression&gt; = &lt;MultiplicativeExpression&gt; | &lt;AdditiveExpression&gt; &quot;+&quot; &lt;MultiplicativeExpression&gt; | &lt;AdditiveExpression&gt; &quot;-&quot; &lt;MultiplicativeExpression&gt;
+
+&lt;LogicalExpression&gt; = &lt;AdditiveExpression&gt; | &lt;LogicalExpression&gt; &quot;||&quot; &lt;AdditiveExpression&gt; | &lt;LogicalExpression&gt; &quot;&amp;&amp;&quot; &lt;AdditiveExpression&gt;
+
+&lt;PrimaryExpression&gt; = &lt;DecimalNumber&gt; | &quot;(&quot;&lt;LogicalExpression&gt; &quot;)&quot;
+</code></pre></div><p><em>终止符永远不会出现左边</em></p> <h2 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h2> <p><a href="https://zh.coursera.org/lecture/dmathgen/87-yu-fa-tu-NrBMC" target="_blank" rel="noopener noreferrer">BNF范式<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="http://sighingnow.github.io/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/bnf.html" target="_blank" rel="noopener noreferrer">BNF范式<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/static-website/oop.html" class="prev">
+        面向对象
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/static-website/assets/js/app.c8496f9f.js" defer></script><script src="/static-website/assets/js/2.1f517c06.js" defer></script><script src="/static-website/assets/js/7.353fc449.js" defer></script>
+  </body>
+</html>
