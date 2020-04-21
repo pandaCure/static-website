@@ -71,7 +71,6 @@ module.exports = {
         {
           title: '主页',
           collapsable: false,
-
           children: ['', 'oop', 'bnf']
         }
       ]
