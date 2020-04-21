@@ -1,10 +1,10 @@
 # 面向对象
 
-### 面向对象的起源
+## 面向对象的起源
 
 1950 年代末和 1960 年代初，“对象”和“面向对象”的术语首次出现在麻省理工学院。但是`Simula (1960)` 被视为第一个具有面向对象特性的语言, 建立了一部分现代面向对象的概念，例如动态绑定、 `class` 、 `object` 。之后，在 1970 年，Smalltalk 第一版被 `Alan Kay, Dan Ingalls and Adele Goldberg` 所开发。`Goldberg` 编辑了 1981 年 8 月发行的 `Byte Magazine` ，向更广泛的受众介绍了 `Smalltalk` 和面向对象的编程。在 1990 年代初和中期，面向对象的编程发展成为主要的编程范例。
 
-### 什么是面向对象
+## 什么是面向对象
 
 `Alan Kay`在回复邮件说道，在他眼里的 OOP 是：
 
@@ -57,7 +57,11 @@
 
   抽象（`Abstraction`）是简化复杂的现实问题的途径，它可以为具体问题找到最恰当的类定义，并且可以在最恰当的继承级别解释问题。
 
+<<<<<<< HEAD
 ### js 是面向对象语言吗
+=======
+## js 是面向对象语言吗
+>>>>>>> zzy/master
 
 JavaScript is perhaps the best known prototype-based programming language, which employs cloning from prototypes rather than inheriting from a class (contrast to class-based programming)。
 
