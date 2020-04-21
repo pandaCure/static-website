@@ -57,11 +57,7 @@
 
   抽象（`Abstraction`）是简化复杂的现实问题的途径，它可以为具体问题找到最恰当的类定义，并且可以在最恰当的继承级别解释问题。
 
-<<<<<<< HEAD
-### js 是面向对象语言吗
-=======
 ## js 是面向对象语言吗
->>>>>>> zzy/master
 
 JavaScript is perhaps the best known prototype-based programming language, which employs cloning from prototypes rather than inheriting from a class (contrast to class-based programming)。
 
