@@ -57,11 +57,7 @@
 
   抽象（`Abstraction`）是简化复杂的现实问题的途径，它可以为具体问题找到最恰当的类定义，并且可以在最恰当的继承级别解释问题。
 
-<<<<<<< HEAD
-### js 是面向对象语言吗
-=======
 ## js 是面向对象语言吗
->>>>>>> zzy/master
 
 JavaScript is perhaps the best known prototype-based programming language, which employs cloning from prototypes rather than inheriting from a class (contrast to class-based programming)。
 
@@ -69,7 +65,7 @@ In a class-based object-oriented language, in general, state is carried by insta
 
 OO 的标志之一是有类的概念，尽管 JavaScript 里面可以实现类，但也是 syntactic sugar over the prototype-based OO pattern，ECMAscript 中没有类的概念，所以它的对象和基于类的对象有所不同。
 
-### 参考
+## 参考
 
 [Alan Kay 回复的邮件](http://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en)
 
