@@ -71,7 +71,7 @@ module.exports = {
         {
           title: '主页',
           collapsable: false,
-          children: ['', 'oop', 'bnf']
+          children: ['', 'oop', 'bnf', 'type-convert']
         }
       ]
     }, // 侧边栏
