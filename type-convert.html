@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Javascript 类型转换(隐式转换) | 钟繇</title>
+    <meta name="description" content="JavaScript知识点">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/static-website/logo.png">
+  <link rel="manifest" href="/static-website/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/static-website/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/static-website/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/static-website/assets/css/0.styles.57852ca5.css" as="style"><link rel="preload" href="/static-website/assets/js/app.964575f5.js" as="script"><link rel="preload" href="/static-website/assets/js/2.2eca4bf4.js" as="script"><link rel="preload" href="/static-website/assets/js/23.54985c21.js" as="script"><link rel="prefetch" href="/static-website/assets/js/10.aabdddf9.js"><link rel="prefetch" href="/static-website/assets/js/11.1388b91e.js"><link rel="prefetch" href="/static-website/assets/js/12.6c41a5d5.js"><link rel="prefetch" href="/static-website/assets/js/13.57bed441.js"><link rel="prefetch" href="/static-website/assets/js/14.8494dca0.js"><link rel="prefetch" href="/static-website/assets/js/15.f81cb783.js"><link rel="prefetch" href="/static-website/assets/js/16.5ff32def.js"><link rel="prefetch" href="/static-website/assets/js/17.420322f1.js"><link rel="prefetch" href="/static-website/assets/js/18.deb54590.js"><link rel="prefetch" href="/static-website/assets/js/19.ec3a94c6.js"><link rel="prefetch" href="/static-website/assets/js/20.e29b6e45.js"><link rel="prefetch" href="/static-website/assets/js/21.65b4e263.js"><link rel="prefetch" href="/static-website/assets/js/22.12a7eb8c.js"><link rel="prefetch" href="/static-website/assets/js/24.d6d7063e.js"><link rel="prefetch" href="/static-website/assets/js/3.e3f62ae2.js"><link rel="prefetch" href="/static-website/assets/js/4.90f737ae.js"><link rel="prefetch" href="/static-website/assets/js/5.6510a53e.js"><link rel="prefetch" href="/static-website/assets/js/6.91340e0b.js"><link rel="prefetch" href="/static-website/assets/js/7.12cc6f32.js"><link rel="prefetch" href="/static-website/assets/js/8.62ddc07b.js"><link rel="prefetch" href="/static-website/assets/js/9.11b7c795.js">
+    <link rel="stylesheet" href="/static-website/assets/css/0.styles.57852ca5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/static-website/" class="home-link router-link-active"><!----> <span class="site-name">钟繇</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/static-website/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/static-website/topics/" class="nav-link">
+  知识点
+</a></div><div class="nav-item"><a href="/static-website/just-javascript/" class="nav-link">
+  Just Javascript对照翻译
+</a></div><div class="nav-item"><a href="/static-website/interview/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><a href="/static-website/origin/" class="nav-link">
+  源码系列
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/static-website/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/static-website/topics/" class="nav-link">
+  知识点
+</a></div><div class="nav-item"><a href="/static-website/just-javascript/" class="nav-link">
+  Just Javascript对照翻译
+</a></div><div class="nav-item"><a href="/static-website/interview/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><a href="/static-website/origin/" class="nav-link">
+  源码系列
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>主页</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/static-website/" class="sidebar-link">Travis自动化部署VuePress到Github Pages</a></li><li><a href="/static-website/oop.html" class="sidebar-link">面向对象</a></li><li><a href="/static-website/bnf.html" class="sidebar-link">产生式(BNF)</a></li><li><a href="/static-website/type-convert.html" class="active sidebar-link">Javascript 类型转换(隐式转换)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/static-website/type-convert.html#类型转换" class="sidebar-link">类型转换</a></li><li class="sidebar-sub-header"><a href="/static-website/type-convert.html#表达式里面的运算隐式转换" class="sidebar-link">表达式里面的运算隐式转换</a></li><li class="sidebar-sub-header"><a href="/static-website/type-convert.html#对象类型转换-type-conversion-抽象操作（abstract-operations）" class="sidebar-link">对象类型转换 Type Conversion -&gt; 抽象操作（Abstract Operations）</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="javascript-类型转换-隐式转换"><a href="#javascript-类型转换-隐式转换" class="header-anchor">#</a> Javascript 类型转换(隐式转换)</h1> <h2 id="类型转换"><a href="#类型转换" class="header-anchor">#</a> 类型转换</h2> <table><thead><tr><th style="text-align:center;"></th> <th style="text-align:center;">Number</th> <th style="text-align:center;">String</th> <th style="text-align:center;">Boolean</th> <th style="text-align:center;">Undefined</th> <th style="text-align:center;">Null</th> <th style="text-align:center;">Object</th> <th style="text-align:center;">Symbol</th></tr></thead> <tbody><tr><td style="text-align:center;">Number</td> <td style="text-align:center;">-</td> <td style="text-align:center;">complex</td> <td style="text-align:center;">+0 -0 NaN false</td> <td style="text-align:center;">x</td> <td style="text-align:center;">x</td> <td style="text-align:center;">Boxing</td> <td style="text-align:center;">x</td></tr> <tr><td style="text-align:center;">String</td> <td style="text-align:center;">complex</td> <td style="text-align:center;">-</td> <td style="text-align:center;">''.length==0 false</td> <td style="text-align:center;">x</td> <td style="text-align:center;">x</td> <td style="text-align:center;">Boxing</td> <td style="text-align:center;">x</td></tr> <tr><td style="text-align:center;">Boolean</td> <td style="text-align:center;">true 1 fasle 0</td> <td style="text-align:center;">'true''false'</td> <td style="text-align:center;">-</td> <td style="text-align:center;">x</td> <td style="text-align:center;">x</td> <td style="text-align:center;">Boxing</td> <td style="text-align:center;">x</td></tr> <tr><td style="text-align:center;">Undefined</td> <td style="text-align:center;">NaN</td> <td style="text-align:center;">'Undefined'</td> <td style="text-align:center;">false</td> <td style="text-align:center;">-</td> <td style="text-align:center;">x</td> <td style="text-align:center;">x</td> <td style="text-align:center;">x</td></tr> <tr><td style="text-align:center;">Null</td> <td style="text-align:center;">0</td> <td style="text-align:center;">'Null'</td> <td style="text-align:center;">false</td> <td style="text-align:center;">x</td> <td style="text-align:center;">-</td> <td style="text-align:center;">x</td> <td style="text-align:center;">x</td></tr> <tr><td style="text-align:center;">Object</td> <td style="text-align:center;">ValueOf</td> <td style="text-align:center;">valueOf toString</td> <td style="text-align:center;">true</td> <td style="text-align:center;">x</td> <td style="text-align:center;">x</td> <td style="text-align:center;">-</td> <td style="text-align:center;">x</td></tr> <tr><td style="text-align:center;">Symbol</td> <td style="text-align:center;">x</td> <td style="text-align:center;">Symbol</td> <td style="text-align:center;">true</td> <td style="text-align:center;">x</td> <td style="text-align:center;">x</td> <td style="text-align:center;">Boxing</td> <td style="text-align:center;">-</td></tr></tbody></table> <h3 id="装箱-boxing-拆箱-unboxing"><a href="#装箱-boxing-拆箱-unboxing" class="header-anchor">#</a> 装箱 Boxing &amp;&amp; 拆箱 UnBoxing</h3> <p>将基本类型转换成对象或者将对象转换成原始对象</p> <h2 id="表达式里面的运算隐式转换"><a href="#表达式里面的运算隐式转换" class="header-anchor">#</a> 表达式里面的运算隐式转换</h2> <p>1、加法操作符的表现行为：</p> <div class="language- extra-class"><pre><code>a、类型是Object，遵循对象到原始对象的原则，日期对象toString(),其他对象调用valueOf(),如果不存在,则调用valueOf()
+
+b、转换成原始对象之后，一个操作数是String，则另一个也要转换成String，之后进行字符串拼接
+
+c、否则，转换成Number(值有可能为NaN),进行加法运算。
+</code></pre></div><p>2、一元算数运算符</p> <div class="language- extra-class"><pre><code>a、+ 转换成Number(值有可能为NaN)
+
+b、- 转换成Number(值有可能为NaN)， 然后改变运算结果
+
+c、++ -- 要求操作数是一个Left Handside,转换成Number，加1
+</code></pre></div><p>3、位运算符</p> <div class="language- extra-class"><pre><code>a、位运算将NaN、Infinty、-Infinty都转换成0
+
+b、否则，要求操作数是整数，要求为32位整数而不是64位浮点数，必要时，位运算会忽略原格式中的小数部分和任何超过32位整数的二进制，要求转换成无符号32位整数，且右操作数在0~31之间，舍弃第五位之后二进制位，以便生成一个正确的整数
+</code></pre></div><p>4、相等与不相等运算符</p> <div class="language- extra-class"><pre><code>a、===
+
+    i、       两个值类型不相等,则他们不相等
+
+    ii、      两个值是null或者undefiend,则他们不相等
+
+    iii、     两个值都是布尔值true或者都是布尔值false，则他们相等
+
+    iiii、    一个或者多个NaN，则他们不相等。NaN与任何值都不相等
+
+    iiiii、   两个值都是Number且数值相等，则相等，+0 === -0 =&gt; true
+
+    iiiiii、  两个值是String,且所含对应位上的16位数完全相等，则他们相等。如果length或者内容不同，则不相等 
+
+    iiiiiii、 两个引用值指向同一个对象、数组和函数。则他们相等
+
+b、==
+
+    i、     类型相同，表现行为与===相同
+
+    ii、    null == undefined =&gt; true
+
+    iii、   一个值是String 一个值是Number 现将String转换成Number 在比较
+
+    iiii、  一个值是true，则将其转换成1进行比较。一个值是false，则将其转换成0进行比较
+
+    iiiii、 一个值是对象，另一值是String、Number，将对象转换成原始值，与+操作符行为一样
+
+    iiiiii、其他类型比较均不相等
+</code></pre></div><p>5、比较运算符</p> <div class="language- extra-class"><pre><code>a、对象转换成原始类型，两个都是String 按照Unicode字符的顺序进行比较
+
+b、如果不全是String，则将其全部转换成Number，Infinity比任何数都大， -Infinity比任何数都小。
+
+c、一个操作数是NaN，则返回false
+</code></pre></div><h2 id="对象类型转换-type-conversion-抽象操作（abstract-operations）"><a href="#对象类型转换-type-conversion-抽象操作（abstract-operations）" class="header-anchor">#</a> 对象类型转换 Type Conversion -&gt; 抽象操作（Abstract Operations）</h2> <p>ECMAScript语言根据需要隐式执行自动类型转换。为了阐明某些构造的语义，定义一组转换抽象操作很有用。转换抽象操作是多态的。他们可以接受任何ECMAScript语言类型的值。但是这些操作没有使用其他规范类型。所以：以下操作不是ECMAScript语言的一部分。在此定义它们仅是为了帮助指定ECMAScript语言的语义。</p> <h3 id="toprimitive-input-preferredtype"><a href="#toprimitive-input-preferredtype" class="header-anchor">#</a> ToPrimitive ( <code>input</code> [ , <code>PreferredType</code> ] )</h3> <p><code>ToPrimitive</code> 是将 <code>input</code> 转换成 <code>non-Object</code> 类型，如果输入的 <code>input</code> 可以转换多个基础类型，可以根据 <code>PreferredType</code> 来决定最终类型。</p> <div class="language- extra-class"><pre class="language-text"><code>
+1. Assert: input is an ECMAScript language value. 
+2. If Type(input) is Object, then
+
+    a. If PreferredType is not present, let hint be &quot;default&quot;.
+    b. Else if PreferredType is hint String, let hint be &quot;string&quot;. 
+    c. Else PreferredType is hint Number, let hint be &quot;number&quot;. 
+    d. Let exoticToPrim be ? GetMethod(input, @@toPrimitive). 
+    e. If exoticToPrim is not undefined, then
+        i. Let result be ? Call(exoticToPrim, input, « hint »). 
+        ii. If Type(result) is not Object, return result.
+        iii. Throw a TypeError exception.
+    f. If hint is &quot;default&quot;,set hint to &quot;number&quot;.
+    g. Return ? OrdinaryToPrimitive(input, hint). 
+
+3. Return input.
+
+</code></pre></div><p>默认的情况下 <code>hint</code> 的默认值是 <code>number</code> , 但是 <code>Date Object</code> 是 <code>String</code> , <code>Symbol</code> 直接返回 <code>Symbol(value)</code> 。</p> <h4 id="ordinarytoprimitive-o-hint"><a href="#ordinarytoprimitive-o-hint" class="header-anchor">#</a> OrdinaryToPrimitive( <code>O</code> , <code>hint</code> )</h4> <div class="language- extra-class"><pre class="language-text"><code>1. Assert: Type(O) is Object.
+2. Assert: Type(hint) is String and its value is either &quot;string&quot; or &quot;number&quot;. 
+3. If hint is &quot;string&quot;, then
+
+    a. Let method Names be«&quot;toString&quot;,&quot;valueOf&quot;». 
+
+4. Else,
+
+    a. Let method Names be«&quot;valueOf&quot;,&quot;toString&quot;». 
+
+5. For each name in methodNames in List order, do
+
+    a. Let method be ? Get(O, name).
+    b. If IsCallable(method) is true, then
+        i. Let result be ? Call(method, O).
+        ii. If Type(result) is not Object, return result.
+
+6. Throw a TypeError exception.
+</code></pre></div><h4 id="例子🌰"><a href="#例子🌰" class="header-anchor">#</a> 例子🌰</h4> <div class="language- extra-class"><pre class="language-text"><code>/** 主要针对object */ 
+// 普通对象
+var c = {}
+c.toString() =&gt; &quot;[object Object]&quot;
+c.valueOf() =&gt; 对象自身
+// 普通自定义对象
+const a = {
+            [Symbol.toPrimitive] (hint) {
+                // test typeof null == 'object'
+                return null
+            },
+            valueOf(){
+                return 1
+            },
+            toString(){
+                return 'a.md1'
+            }
+        }
+a.toString() =&gt; 'a.md1'
+a.valueOf() =&gt; '1'
+// 函数对象
+function aaaa () {}
+aaaa.toString() =&gt; &quot;function aaaa () {}&quot;
+aaaa.valueOf() =&gt; 对象本身
+// 日期对象
+new Date().toString() =&gt; &quot;Tue Apr 28 2020 22:23:23 GMT+0800 (中国标准时间)&quot;
+new Date().valueOf() =&gt; 1588083841807
+// 正则对象
+/\d+/.toString() =&gt; &quot;/\d+/&quot;
+/\d+/.valueOf() =&gt; 对象本身
+// 数组对象
+[1,2,3].toString() =&gt; &quot;1,2,3&quot;
+[1,2,3].valueOf() =&gt; 对象本身
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/static-website/bnf.html" class="prev">
+        产生式(BNF)
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/static-website/assets/js/app.964575f5.js" defer></script><script src="/static-website/assets/js/2.2eca4bf4.js" defer></script><script src="/static-website/assets/js/23.54985c21.js" defer></script>
+  </body>
+</html>
