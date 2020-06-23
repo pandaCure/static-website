@@ -71,7 +71,14 @@ module.exports = {
         {
           title: '主页',
           collapsable: false,
-          children: ['', 'oop', 'bnf', 'type-convert', 'javascript_modules']
+          children: [
+            '',
+            'oop',
+            'bnf',
+            'type-convert',
+            'javascript_modules',
+            'boswer'
+          ]
         }
       ]
     }, // 侧边栏
